@@ -36,6 +36,9 @@ html {
   line-height: 1.15; /* 1 */
   -webkit-text-size-adjust: 100%; /* 2 */
 }
+pre{
+  white-space: pre-wrap;
+}
 
 /*
 Sections
@@ -1261,4 +1264,6 @@ a:hover {
   }
 }
 
-
+.break-words {
+overflow-wrap: break-word;
+}

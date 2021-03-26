@@ -1,166 +1,148 @@
 <!DOCTYPE html>
-<html lang="zh-tw">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>聊天系統</title>
-    <!-- tailwindcss + style.css -->
-    <link rel="stylesheet" href="stylesheet/style.css">
-    <!-- jQuery -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <!-- main.js -->
-    <script src="javascripts/main.js"></script>
-    <!-- google fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Noto+Sans+TC:400,700&display=swap" rel="stylesheet">
-    <!-- material design icons -->
-    <link rel="stylesheet" href="https://cdn.materialdesignicons.com/4.7.95/css/materialdesignicons.min.css">
+    <title>note</title>
+    <link rel="stylesheet" href="stylesheets/style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;800&display=swap" rel="stylesheet">
 </head>
 
 <body>
-    <nav id="navbar" class="sticky top-0 left-0 w-full bg-blur flex justify-center">
-        <div class="container p-5 flex items-center justify-between">
-            <a href="/list" class="text-blue-500 text-xl">
-                <span class="mdi mdi-forum-outline"></span> 聊天系統
-            </a>
-            <div class="flex items-center">
-                <a href="#" class='text-gray-600 hover:text-gray-700 mr-8'>更多功能</a>
-                <a href="#" class='text-gray-600 hover:text-gray-700'>關於我們</a>
+    <nav class="flex justify-center fixed w-full bg-white bg-opacity-95 z-50">
+        <div class="container p-5 md:px-8 flex justify-between items-center">
+            <div class="text-green-500 text-xl font-bold">
+                NOTE
+            </div>
+
+            <div class="flex">
+                <a href="#" class="mr-5 btn-actionbar">Features</a>
+                <a href="#" class="btn-actionbar">About us</a>
             </div>
         </div>
     </nav>
 
-    <header id="header" class="min-h-screen-nav w-full flex justify-center p-5">
-        <div class="container flex flex-wrap">
+    <header id="header" class="flex justify-center w-full bg-white">
+        <div class="container p-5 min-h-screen flex flex-wrap">
             <div class="w-full md:w-1/2 flex items-center">
-                <div class="inline-block p-3 py-12">
-                    <h1 class="text-5xl font-bold mt-2 text-gray-900 inline">一直使用一直<p
-                            class="text-blue-500 inline font-bold">爽</p>
-                    </h1>
-                    <p class="text-gray-600">米南德曾說過，正義勝似法律。 這段話令我陷入了沈思。
-                        楊朔說過一句發人省思的話，作為一個人，要是不經歷過人世上的悲歡離合，不跟生活打過交手仗，就不可能真正懂得人生的意義。 想必各位已經看出了其中的端倪。 把聊天系統輕鬆帶過，顯然並不適合。</p>
+                <div class="inline-block px-5 py-12 md:px-8">
+                    <h1 class="text-5xl font-bold leading-normal">Record your thoughts,<br>without any delay.</h1>
+
+                    <a href="/register" class="btn-primary mt-5">join us</a>
                     <div class="mt-5">
-                        <a href="/register" class="btn-lg btn-primary">註冊</a>
-                        <a href="/login" class="ml-3 btn-lg btn-secondary">登入</a>
+                        <p class="text-gray-600 inline-block">Already have account?</p>
+                        <a href="/login">log in</a>
                     </div>
                 </div>
             </div>
-            <div class="w-full md:w-1/2 flex items-center p-3">
-                <img src="images/chat.svg" alt="" class="w-full">
+            <div class="w-full md:w-1/2 flex items-center">
+                <img src="/images/Note.svg" alt="" class="w-full">
             </div>
         </div>
     </header>
 
-    <!-- advanced introduce -->
-    <section id="intro" class="w-full bg-gray-200 flex justify-center p-5">
-        <div class="container">
-            <div class="my-5">
-                <h1 class="text-3xl font-bold text-center">全新功能</h1>
-                <p class="text-gray-600 text-center">等你來體驗</p>
+    <section class="flex justify-center w-full bg-gray-100">
+        <div class="container p-5 min-h-screen flex flex-wrap">
+            <div class="w-full md:w-1/2 flex items-center justify-center">
+                <div class="grid gap-4 grid-cols-2 w-full md:w-2/3 h-5/6 md:h-2/3 px-5 py-12">
+                    <div class="bg-green-500 p-5 col-span-2 justify-items-start">
+                        <div id="lineOne" class="p-3 mt-3 bg-white opacity-20"></div>
+                        <div id="lineTwo" class="p-3 mt-3 bg-white opacity-20"></div>
+                        <div id="lineThree" class="p-3 mt-3 bg-white opacity-20"></div>
+                        <div id="lineFour" class="p-3 mt-3 w-1/2 bg-white opacity-20"></div>
+                    </div>
+                    <div class="bg-blue-500 text-blue-200 p-5">
+                        <div id="lineOne" class="lineOne p-3 mt-3 bg-white opacity-20"></div>
+                        <div class="lineTwo  p-3 mt-3 bg-white opacity-20 w-1/2"></div>
+                    </div>
+                    <div class="bg-white p-5 text-gray-600">
+                        <div class="lineOne p-3 mt-3 bg-gray-800 opacity-20"></div>
+                        <div class="lineTwo p-3 mt-3 bg-gray-800 opacity-20"></div>
+                        <div class="lineThree p-3 mt-3 bg-gray-800 opacity-20 w-1/2"></div>
+                    </div>
+                </div>
             </div>
-
-            <div class="grid grid-cols-1 md:grid-cols-4 gap-4">
-                <div class="bg-white rounded-lg shadow-lg p-3 flex flex-col justify-center">
-                    <div class="flex justify-center p-4 items-center">
-                        <img src="images/privacy.svg" alt="privacy" class="h-32 justify-center">
-                    </div>
-                    <div class="text-center">
-                        <h4 class="text-gray-900 font-bold text-xl mt-3">注重隱私</h4>
-                        <p class="text-gray-600">
-                            這種事實對本人來說意義重大，相信對這個世界也是有一定意義的。
+            <div class="w-full md:w-1/2 flex items-center">
+                <div class="inline-block px-5 py-12 md:px-8">
+                    <h1 class="text-5xl font-bold leading-relaxed">Simple & elegant</h1>
+                    <div class="text-gray-600 text-xl my-5 leading-normal">
+                        <p class="flex items-center"><span class="material-icons mr-3">lightbulb</span> It's simple</p>
+                        <p class="flex items-center"><span class="material-icons mr-3">nightlight</span> It's elegant
                         </p>
+                        <p class="flex items-center"><span class="material-icons mr-3">shop</span> It's simple and
+                            elegant</p>
+                        <p class="flex items-center"><span class="material-icons mr-3">thumb_up</span> It's not only
+                            simple but elegant</p>
                     </div>
-                </div>
-                <div class="bg-white rounded-lg shadow-lg p-3">
-                    <div class="flex justify-center p-4 items-center">
-                        <img src="images/phone.svg" alt="phone" class="h-32 justify-center">
-                    </div>
-                    <div class="text-center">
-                        <h4 class="text-gray-900 font-bold text-xl mt-3">介面友善</h4>
-                        <p class="text-gray-600">
-                            這種事實對本人來說意義重大，相信對這個世界也是有一定意義的。
-                        </p>
-                    </div>
-                </div>
-                <div class="bg-white rounded-lg shadow-lg p-3">
-                    <div class="flex justify-center p-4 items-center">
-                        <img src="images/2020.svg" alt="2020" class="h-32 justify-center">
-                    </div>
-                    <div class="text-center">
-                        <h4 class="text-gray-900 font-bold text-xl mt-3">2020年開發</h4>
-                        <p class="text-gray-600">
-                            這種事實對本人來說意義重大，相信對這個世界也是有一定意義的。
-                        </p>
-                    </div>
-                </div>
-                <div class="bg-white rounded-lg shadow-lg p-3">
-                    <div class="flex justify-center p-4 items-center">
-                        <img src="images/tailwind.svg" alt="css" class="h-32 justify-center">
-                    </div>
-                    <div class="text-center">
-                        <h4 class="text-gray-900 font-bold text-xl mt-3">使用tailwind.css</h4>
-                        <p class="text-gray-600">
-                            這種事實對本人來說意義重大，相信對這個世界也是有一定意義的。
-                        </p>
-                    </div>
+                    <a href="#" class="mt-5 btn-primary">Learn more</a>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- subcribe -->
-    <section id="rate" class="min-h-screen-nav w-full bg-blue-500 p-5 flex justify-center">
-        <div class="container flex flex-wrap items-center">
-            <div class="w-full md:w-1/2 p-4">
-                <img src="images/user.svg" alt="" class="w-full">
-            </div>
+    <section class="flex justify-center w-full bg-green-500">
+        <div class="container p-5 min-h-screen flex flex-wrap">
 
-            <div class="w-full md:w-1/2 p-2 md:p-16 max-w-xl">
-                <div class="p-5 rounded-lg bg-blue-700">
-                    <h3 class="text-2xl font-bold text-white">訂閱我們!</h3>
-                    <p class="text-blue-300 mt-3">
-                        訂閱我們來獲取更多訊息!<br>
-                        (This feature is still under development.)
+            <div class="w-full md:w-1/2 flex items-center">
+                <div class="inline-block px-5 py-12 md:px-8">
+                    <h1 class="text-5xl text-white font-bold leading-normal">Efficiency concerned</h1>
+                    <p class="mt-5 text-green-200">Abandoning all notions of mango, I turned my attention to the violet
+                        concoction the vendor was now scooping into a bowl. The first mouthful proved what sight had
+                        already suspected: the ice cream was denser than any frozen dessert I'd ever tasted, rich and
+                        full-bodied, with an earthiness that juxtaposed brilliantly with the sweetness. News from BBC.
                     </p>
-                    <form action="" method="post" class="flex mt-5">
-                        <input type="text" class="custom-input mr-5" placeholder="Email" required style="width: calc(100% - 1.25rem - 56px)">
-                        <button type="submit" class="btn btn-success"><span class="mdi mdi-send"></span></button>
-                    </form>
+                    <a href="#" class="mt-5 btn-white">Explore</a>
+                </div>
+            </div>
+
+            <div class="w-full md:w-1/2 flex items-center">
+                <img src="/images/Time.svg" alt="" class="w-full">
+            </div>
+        </div>
+    </section>
+
+    <section class="flex justify-center flex-wrap w-full bg-gray-100">
+        <div class="inline-block text-center p-5 py-12">
+            <h1 class="text-4xl font-bold">More features</h1>
+            <p class="text-gray-600 mt-3">Delicious food</p>
+        </div>
+        <div class="container p-5 md:p-8 grid grid-col-1 md:grid-cols-3">
+            <div class="w-full p-5">
+                <img src="/images/FastFood.svg" alt="">
+                <div class="mt-5 text-center">
+                    <h1 class="text-2xl font-bold">Fried Chicken</h1>
+                    <p class="text-gray-600">Nice</p>
+                </div>
+            </div>
+            <div class="w-full p-5">
+                <img src="/images/Pancake.svg" alt="">
+                <div class="mt-5 text-center">
+                    <h1 class="text-2xl font-bold">Pancake</h1>
+                    <p class="text-gray-600">Good</p>
+                </div>
+            </div>
+            <div class="w-full p-5">
+                <img src="/images/Coffee.svg" alt="">
+                <div class="mt-5 text-center">
+                    <h1 class="text-2xl font-bold">Coffee</h1>
+                    <p class="text-gray-600">Not bad</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- dog -->
-    <section id="dog" class="min-h-screen-nav w-full bg-teal-400 p-5 flex justify-center">
-        <div class="container flex flex-wrap items-center">
-            <div class="w-full md:w-2/3 p-4">
-                <h1 class="text-5xl text-gray-900 font-bold">右邊是一隻可愛的狗狗</h1>
-                <p class="mt-4 text-teal-700">
-                    所謂狗狗，關鍵是狗狗需要如何解讀。<br>總而言之，盧梭相信，生活得最有意義的人，並不就是年歲活得最長的人，而是對生活最有感受的人。<br>這句話幾乎解讀出了問題的根本。 如果仔細思考狗狗，會發現其中蘊含的深遠意義。<br>我們都知道，只要有意義，那麼就必須慎重考慮。
-                </p>
-                <hr class="border-teal-500 my-2">
-                <p class="text-teal-700">
-                    想知道為啥會有狗狗在右邊嗎?
-                </p>
-                <a href="#" class="text-gray-900">了解更多 <span class="mdi mdi-arrow-right"></span></a>
+    <footer class="flex justify-center w-full bg-gray-800 text-white">
+        <div class="container p-5 py-8 md:px-8 flex justify-between items-center">
+            <div class="flex">
+                <a href="#" class="text-white hover:text-gray-200">Note</a>
             </div>
 
-            <div class="w-full md:w-1/3 p-4">
-                <img src="images/dog.svg" alt="" class="w-full">
+            <div class="flex">
+                <a href="#" class="text-white hover:text-gray-200 material-icons">arrow_upward</a>
             </div>
-        </div>
-    </section>
-
-    <footer class="px-5 py-8 bg-gray-800 flex justify-center">
-        <div class="container flex items-center justify-between md:px-5">
-            <a href="https://github.com/roywatermelon11370/"
-                class="text-gray-500 hover:text-gray-200 mdi mdi-copyright">
-                2020 RoyHuang
-            </a>
-
-            <a id="backToTop" href="#header" class="text-3xl mdi mdi-arrow-up text-white hover:text-gray-200"></a>
         </div>
     </footer>
 </body>

@@ -89,28 +89,9 @@ var voc_online=(word)=>{
 	          ch_df=[];
 	          phrase=[];   
 	        });
-	        /*for(let i=0;i<=inde;i++){
-	          //console.log(inde);
-	          let ch_name=i+"ch_df";
-	          let def_name=i+"def";
-	          let cnt_name=i+"cnt";
-	          let eg_name=i+"eg_ex";
-	          let ph_name=i+"phrase";
-	          console.log(result.part_of_speech[i]);
-	          for(let j=0;j<result[ch_name].length;j++){
-	            console.log(result[def_name][j]);
-	            console.log(result[ch_name][j]);
-	          }
-	          console.log("\n example sentence: \n");
-	          for(let k=0;k<result[cnt_name].length;k++){
-	            console.log(result[eg_name][k]);
-	            console.log(result[cnt_name][k]);
-	          }
-	          console.log("\n phrase: \n")
-	          for(let l=0;l<result[ph_name].length;l++){
-	            console.log(result[ph_name][l]);
-	          }
-	        }*/
+	        if(result["part_of_speech"].length==0){
+	        	result.part_of_speech.push("the word is not exist");
+	        }
 	        res={word: word,content: result};
 			resolve(res);	
 		});

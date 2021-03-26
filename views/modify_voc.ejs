@@ -88,6 +88,9 @@
 	      	//$('#con').val("");
 	      	var res=JSON.parse(httpRequest.responseText);
 	      	let content=res["content"];
+	      	if(content["part_of_speech"][0]=="the word is not exist"){
+				alert("the word is not exist");
+	      	}
 	      	console.log(res);
 	      	console.log(content);
 	      	let ap_con="";
